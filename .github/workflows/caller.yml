@@ -19,8 +19,3 @@ jobs:
       app_name: my-app
       env_deploy: ${{ inputs.environment }}
 
-  caller-job-external:
-    uses: ps-actions-sandbox/demo-called-workflow/.github/workflows/demo_called_workflow.yaml@main
-    with:
-      app_name: my-other-app
-      env_deploy: ${{ inputs.environment }}
