@@ -8,5 +8,5 @@ jobs:
     uses: ./.github/workflows/callee.yml
     with:
       app_name: my-app
-      env_deploy: prod
+      env_deploy: ${{ inputs.environment }}
 
