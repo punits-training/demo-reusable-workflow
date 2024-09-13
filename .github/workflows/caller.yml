@@ -2,6 +2,15 @@ name: Caller Workflow
 
 on:
   workflow_dispatch:
+    inputs:
+     environment:
+      description: 'Define which environment to run'
+      required: true
+      default: 'test' 
+      type: choice
+      options:
+      - test
+      - prod
 
 jobs:
   caller-job-local:
