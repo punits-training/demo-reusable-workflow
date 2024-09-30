@@ -3,7 +3,7 @@ name: Caller Workflow
 on:
   workflow_dispatch:
     inputs:
-     environment:
+     helloworld:
       description: 'Define which environment to run'
       required: true
       default: 'test' 
@@ -17,5 +17,5 @@ jobs:
     uses: ./.github/workflows/callee.yml
     with:
       app_name: my-app
-      env_deploy: ${{ inputs.environment }}
+      env_deploy: ${{ inputs.helloworld }}
 
